@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malas Ngoding</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .content iframe {
+            width: 100%;
+            height: 600px; /* Adjust the height as needed */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>Malas Ngoding</h1>
+            <p>Tutorial belajar membuat layout website sederhana di WARDEV</p>
+            <audio autoplay>
+                <source src="guitargirl.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#" onclick="loadContent('')">Home</a></li>
+                <li><a href="#" onclick="loadContent('https://www.w3schools.com/html')">HTML</a></li>
+                <li><a href="#" onclick="loadContent('https://www.w3schools.com/css/')">CSS</a></li>
+                <li><a href="#" onclick="loadContent('https://www.w3schools.com/php/')">PHP</a></li>
+                <li><a href="#" onclick="loadContent('https://www.w3schools.com/java/')">JavaScript</a></li>
+            </ul>
+        </div>
+        <div class="badan">
+            <div class="sidebar">
+                <ul class="ulli">
+                    <li><a href="#" onclick="loadContent('https://www.petanikode.com/tutorial/html/')">Tutorial HTML dasar</a></li>
+                    <li><a href="#" onclick="loadContent('https://www.petanikode.com/tutorial/css/')">Tutorial CSS dasar</a></li>
+                    <li><a href="#" onclick="loadContent('https://www.petanikode.com/tutorial/php/')">Tutorial PHP dasar</a></li>
+                    <li><a href="#" onclick="loadContent('https://www.petanikode.com/topik/bootstrap/')">Tutorial Bootstrap dasar</a></li>
+                    <li><a href="#" onclick="loadContent('https://www.petanikode.com/tutorial/javascript/')">Tutorial Javascript dasar</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div id="default-content">
+                    <img src="mysasa.png" alt="Example Image">
+                    <p><strong>Warung Developer: Belajar Menjadi Front-End Developer untuk Pemula</strong></p>
+                    <p>Selamat datang di Warung Developer (Wardev)! Di sini, kami berfokus untuk membantu para pemula yang tertarik memulai karir sebagai front-end developer. Profesi ini melibatkan pembuatan dan pengembangan tampilan depan (user interface) dari sebuah situs web atau aplikasi, yang mencakup aspek visual dan interaksi pengguna.</p>
+                    
+                    <h3>Apa itu Front-End Development?</h3>
+                    <p>Front-end development adalah bagian dari pengembangan web yang berhubungan langsung dengan pengalaman pengguna. Tugas utama front-end developer adalah mengubah desain yang telah dibuat oleh desainer menjadi kode HTML, CSS, dan JavaScript yang dapat dilihat dan berinteraksi dengan pengguna.</p>
+                    
+                    <h3>Mengapa Memilih Karir sebagai Front-End Developer?</h3>
+                    <ul style="list-style-type: none;">
+                        <li><strong>Permintaan Tinggi</strong>: Banyak perusahaan mencari front-end developer untuk meningkatkan pengalaman pengguna di situs web mereka.</li>
+                        <li><strong>Kreativitas dan Teknologi</strong>: Profesi ini menggabungkan elemen desain dan teknologi, cocok untuk mereka yang menyukai kreativitas dan coding.</li>
+                        <li><strong>Peluang Kerja yang Fleksibel</strong>: Front-end developer bisa bekerja secara remote atau freelance, memberikan fleksibilitas dalam karir.</li>
+                    </ul>
+                    
+                    <h3>Langkah-langkah untuk Menjadi Front-End Developer</h3>
+                    <ol style="list-style-type: none;">
+                        <li><strong>Pelajari Dasar-Dasar HTML, CSS, dan JavaScript</strong>:
+                            <ul>
+                                <li><strong>HTML</strong> (HyperText Markup Language) adalah bahasa markup untuk membuat struktur halaman web.</li>
+                                <li><strong>CSS</strong> (Cascading Style Sheets) digunakan untuk mendesain tampilan halaman web, seperti warna, layout, dan font.</li>
+                                <li><strong>JavaScript</strong> adalah bahasa pemrograman yang memungkinkan Anda menambahkan interaksi dinamis ke situs web.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Gunakan Framework dan Library</strong>: Pelajari framework seperti <strong>Bootstrap</strong> untuk mempermudah styling, atau <strong>React</strong> untuk membangun user interface interaktif.</li>
+                        <li><strong>Buat Proyek Sederhana</strong>: Praktikkan keterampilan Anda dengan membuat proyek sederhana seperti landing page atau portofolio online.</li>
+                        <li><strong>Bergabung dengan Komunitas</strong>: Bergabunglah dengan komunitas developer untuk belajar dari sesama, mendapatkan feedback, dan mengembangkan jaringan profesional.</li>
+                        <li><strong>Terus Berlatih dan Belajar</strong>: Teknologi web terus berkembang, jadi penting untuk selalu memperbarui pengetahuan dan keterampilan Anda.</li>
+                    </ol>
+                    
+                    <h3>Sumber Belajar di Warung Developer</h3>
+                    <p>Di Wardev, kami menyediakan berbagai sumber belajar, mulai dari tutorial dasar, video panduan, hingga proyek-proyek praktis. Kami juga menyelenggarakan workshop dan diskusi online untuk membahas topik terkini dalam front-end development.</p>
+                    <p>Jadi, apakah Anda siap memulai perjalanan Anda menjadi front-end developer? Kunjungi <a href="#">Wardev</a> untuk mulai belajar dan bergabung dengan komunitas kami!</p>
+                </div>
+                <iframe id="content-frame" src="" style="display:none;"></iframe>
+            </div>
+        </div>
+        <div class="footer">
+            <p>@Copyright By MyFirefly</p>
+        </div>
+    </div>
+    <script>
+        function loadContent(url) {
+            const iframe = document.getElementById('content-frame');
+            const defaultContent = document.getElementById('default-content');
+
+            if (url) {
+                iframe.src = url;
+                iframe.style.display = 'block';
+                defaultContent.style.display = 'none';
+            } else {
+                iframe.style.display = 'none';
+                defaultContent.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

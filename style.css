@@ -1,0 +1,105 @@
+/* General reset and style */
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	color: #2C3E50; /* Dark Blue for text */
+	background: #ECF0F1; /* Light Gray background */
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* Prevent the body itself from scrolling */
+}
+
+.wrap {
+	display: flex;
+	flex-direction: column;
+	flex: 1; /* Allow wrap to grow and fill the height of the body */
+	overflow: hidden; /* Prevent the wrap from scrolling */
+}
+
+.header {
+	background: #2C3E50; /* Dark Blue */
+	padding: 10px;
+	color: #ECF0F1; /* Light Gray for text contrast */
+	text-align: center;
+	flex-shrink: 0; /* Prevent the header from shrinking */
+}
+
+.menu {
+	background: #3498DB; /* Bright Blue */
+	flex-shrink: 0; /* Prevent the menu from shrinking */
+}
+
+.menu ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #3498DB; /* Bright Blue */
+	list-style: none;
+	padding: 10px 0;
+	margin: 0;
+}
+
+.menu ul li {
+	padding: 0 20px;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	color: #ECF0F1; /* Light Gray for text contrast */
+}
+
+.badan {
+	display: flex;
+	flex: 1; /* Fill the remaining space */
+	overflow: hidden; /* Prevent the badan from scrolling */
+}
+
+.sidebar {
+	background: #95A5A6; /* Gray */
+	width: 25%;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow-y: auto; /* Allow sidebar to scroll if content overflows */
+	color: #ECF0F1; /* Light Gray for text contrast */
+}
+
+.sidebar .ulli {
+	list-style: none;
+	padding-left: 0;
+}
+
+.sidebar .ulli li {
+	margin-bottom: 10px;
+}
+
+.sidebar .ulli li a {
+	text-decoration: none;
+	color: #2C3E50; /* Dark Blue for contrast */
+}
+
+.content {
+	background: #ECF0F1; /* Light Gray */
+	width: 75%;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow-y: auto; /* Allow content to scroll if needed */
+	color: #2C3E50; /* Dark Blue */
+}
+
+.footer {
+	background: #2C3E50; /* Dark Blue */
+	color: #ECF0F1; /* Light Gray */
+	text-align: center;
+	padding: 14px;
+	flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+img{
+	width: auto;
+	height: auto;
+}
